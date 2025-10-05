@@ -1,234 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miro | The Innovation Workspace</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery Tool App</title>
   <link rel="icon" type="image/png" href="favicon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 50%, #3B82F6 100%);
-        }
-.floating-cursor {
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-        .logo-carousel {
-            animation: scroll 30s linear infinite;
-        }
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-    </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .floating-cursor {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-900">
-    <!-- Navigation -->
-    <nav class="sticky top-6 z-50 bg-white rounded-lg shadow-xl mx-6 mb-2 mt-0">
-        <div class="container mx-auto px-8 py-3 flex justify-between items-center">
-<div class="flex items-center space-x-10">
-                <a href="#" class="flex items-center">
-                    <img src="favicon.png">
-                </a>
-                    
-                 <a href="https://miro.com/pricing/" class="font-medium text-gray-700 hover:text-blue-600 py-2">Pricing</a>
-</div>
-            </div>
-            
-            <div class="flex items-center space-x-4">
-                <a href="https://miro.com/contact/sales/" class="hidden md:block font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
-                <a href="https://miro.com/pricing/" class="hidden md:block font-medium text-gray-700 hover:text-blue-600">Pricing</a>
-<a href="https://miro.com/signup/" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium">Register</a>
-<button class="lg:hidden p-2">
-                    <i data-feather="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
+  <!-- Navigation -->
+  <nav class="sticky top-6 z-50 bg-white rounded-lg shadow-xl mx-6">
+    <div class="container mx-auto px-8 py-3 flex justify-between items-center">
+      <!-- Left: Logo + Links -->
+      <div class="flex items-center space-x-10">
+        <a href="#" class="flex items-center">
+          <img src="favicon.png" alt="Delivery Tool Logo" class="h-10 w-auto">
+        </a>
+        <a href="#pricing" class="font-medium text-gray-700 hover:text-blue-600 py-2">Pricing</a>
+        <a href="#contact" class="font-medium text-gray-700 hover:text-blue-600 py-2">Contact</a>
+      </div>
+      <!-- Right: CTA -->
+      <div class="flex items-center space-x-4">
+        <a href="#support" class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium">Support</a>
+        <button class="lg:hidden p-2">
+          <i data-feather="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative text-white pt-20 pb-20 overflow-hidden">
+    <div class="container mx-auto px-8 relative z-10 text-center max-w-3xl">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">Manage Deliveries Smarter</h1>
+      <p class="text-xl md:text-2xl mb-8">Delivery Tool App helps you track and manage deliveries directly inside Google Sheets.</p>
+      <a href="#contact" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg inline-block">Get Started</a>
+    </div>
+    <!-- Floating cursors for effect -->
+    <img src="favicon.png" alt="" class="absolute top-1/4 left-1/4 floating-cursor opacity-70 w-20">
+    <img src="favicon.png" alt="" class="absolute top-1/3 right-1/4 floating-cursor opacity-70 w-20">
+    <img src="favicon.png" alt="" class="absolute bottom-1/4 left-1/3 floating-cursor opacity-70 w-16">
+    <div class="absolute inset-0 hero-bg"></div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-8">
+      <h2 class="text-3xl font-bold text-center mb-16">Why Choose Delivery Tool App?</h2>
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="text-center">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i data-feather="truck" class="text-blue-600 w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Delivery Tracking</h3>
+          <p class="text-gray-600 mb-4">Track every delivery in real-time directly from your Google Sheets.</p>
         </div>
-    </nav>
-    <!-- Hero Section -->
-    <section class="hero-gradient text-white pt-20 pb-20 relative overflow-hidden">
-<div class="container mx-auto px-8 relative z-10">
-<div class="max-w-3xl mx-auto text-center">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">Innovation, redefined</h1>
-                <p class="text-xl md:text-2xl mb-8">Meet the Innovation Workspace, the AI-powered collaboration platform that helps your team build the right thing faster.</p>
-                <a href="https://miro.com/signup/" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg inline-block">Register</a>
-</div>
+        <div class="text-center">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i data-feather="settings" class="text-blue-600 w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Easy Setup</h3>
+          <p class="text-gray-600 mb-4">No complex systems—install our add-on and start managing right away.</p>
         </div>
-        
-        <!-- Floating cursor elements -->
-        <img src="https://static-website.miro.com/miro-site-lp-build-assets/assets/floating-ornaments/cursor-ai.svg" class="absolute top-1/4 left-1/4 floating-cursor opacity-70" style="width: 120px;">
-        <img src="https://static-website.miro.com/miro-site-lp-build-assets/assets/floating-ornaments/rad-cursor.svg" class="absolute top-1/3 right-1/4 floating-cursor opacity-70" style="width: 100px;">
-        <img src="https://static-website.miro.com/miro-site-lp-build-assets/assets/floating-ornaments/roger-cursor.svg" class="absolute bottom-1/4 left-1/3 floating-cursor opacity-70" style="width: 80px;">
-    </section>
-    <!-- Logo Marquee -->
-    <section class="py-12 bg-gray-50 overflow-hidden mx-6 rounded-lg">
-<div class="text-center mb-8">
-            <p class="text-gray-600 max-w-2xl mx-auto">More than 100M users and 250,000 companies collaborate in the Innovation Workspace.</p>
+        <div class="text-center">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i data-feather="shield" class="text-blue-600 w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Secure & Private</h3>
+          <p class="text-gray-600 mb-4">Your data stays with you—we don’t share it with third parties.</p>
         </div>
-        
-        <div class="relative">
-            <div class="logo-carousel whitespace-nowrap">
-                <img src="https://images.ctfassets.net/w6r2i5d8q73s/7qqYuOhg1XTnQgadkFNiAI/36f4e55d8f672c9ad1a1bc742f9a356e/Logo-Accenture.svg" class="inline-block mx-8 h-8 opacity-70 hover:opacity-100 transition">
-                <img src="https://images.ctfassets.net/w6r2i5d8q73s/39Fxqujl1tqb7E0wuVSTZb/b425bd1f604601ab6a8cc1892792befe/Logo-Comcast.svg" class="inline-block mx-8 h-8 opacity-70 hover:opacity-100 transition">
-                <img src="https://images.ctfassets.net/w6r2i5d8q73s/7lcceRAA48IOYIq81FwiDy/27fba31958cc2c3999d758dee92a8d2d/Logo-CVS-Health.svg" class="inline-block mx-8 h-8 opacity-70 hover:opacity-100 transition">
-                <img src="https://images.ctfassets.net/w6r2i5d8q73s/3EuFwdkoYJOlxxZ8KNrSA8/279c6de72a01c38ecd14eded6e5949e3/Logo-Danaher.svg" class="inline-block mx-8 h-8 opacity-70 hover:opacity-100 transition">
-                <img src="https://images.ctfassets.net/w6r2i5d8q73s/6pwT3MtxBInt7oNINB4Li6/0d73ea7a8fc668ca7909f599ce42ee90/Logo-Delloite.svg" class="inline-block mx-8 h-8 opacity-70 hover:opacity-100 transition">
-                <img src="https://images.ctfassets.net/w6r2i5d8q73s/5wsL1M2LKRoe0jbv5yj0kM/77b1eb193453975bc2b6b931b0da3b55/Logo-Dropbox.svg" class="inline-block mx-8 h-8 opacity-70 hover:opacity-100 transition">
-                <img src="https://images.ctfassets.net/w6r2i5d8q73s/FRhbgj2OqoAKNalplKqwC/084b68e4be26647cdd82cf54ac7941ad/Logo-Hanes.svg" class="inline-block mx-8 h-8 opacity-70 hover:opacity-100 transition">
-                <img src="https://images.ctfassets.net/w6r2i5d8q73s/7eMrWKnItcRdYc7KJfKjOs/75ad57cac9321832e74714107f27f3fd/Logo-Hr-block.svg" class="inline-block mx-8 h-8 opacity-70 hover:opacity-100 transition">
-                <img src="https://images.ctfassets.net/w6r2i5d8q73s/4Sl71c85CSimVrBQ6OIdI0/1e954c70c12bca3947b91e14462afb51/Logo-Kimberly-Clark.svg" class="inline-block mx-8 h-8 opacity-70 hover:opacity-100 transition">
-            </div>
-        </div>
-    </section>
-    <!-- Features Section -->
-    <section class="py-20">
-        <div class="container mx-auto px-8">
-<h2 class="text-3xl font-bold text-center mb-16">A better way to get from first idea to final outcome faster.</h2>
-            
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="text-center">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i data-feather="layout" class="text-blue-600 w-8 h-8"></i>
-</div>
-                    <h3 class="text-xl font-bold mb-4">The Intelligent Canvas</h3>
-                    <p class="text-gray-600 mb-4">Big ideas deserve room to grow. Our limitless canvas lets your team create and build together - from the first 'What if?' to the final 'Wow!'</p>
-                    <a href="#" class="text-blue-600 font-medium hover:underline">Learn more</a>
-</div>
-                
-                <div class="text-center">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i data-feather="settings" class="text-blue-600 w-8 h-8"></i>
-</div>
-                    <h3 class="text-xl font-bold mb-4">Custom-crafted to fit your needs</h3>
-                    <p class="text-gray-600 mb-4">Power through any project with step-by-step templates that turn messy free-for-alls into super slick workflows.</p>
-                    <a href="#" class="text-blue-600 font-medium hover:underline">Learn more</a>
-</div>
-                
-                <div class="text-center">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i data-feather="zap" class="text-blue-600 w-8 h-8"></i>
-</div>
-                    <h3 class="text-xl font-bold mb-4">Pure speed, no fluff</h3>
-                    <p class="text-gray-600 mb-4">Focus on what matters with distraction-free formats like docs, data tables, timelines, and slides to keep your creative flow flowing.</p>
-                    <a href="#" class="text-blue-600 font-medium hover:underline">Learn more</a>
-</div>
-            </div>
-        </div>
-    </section>
-    <!-- AI Section -->
-    <section class="py-20 bg-gray-50 mx-6 rounded-lg">
-        <div class="container mx-auto px-8">
-<div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h2 class="text-3xl font-bold mb-6">Accelerate work and get more done with Miro AI</h2>
-                    <p class="text-gray-600 mb-8">Unleash AI superpowers across your canvas. Breeze through boring tasks like staying on top of updates or comments with automated summaries.</p>
-                    <a href="#" class="text-blue-600 font-medium hover:underline">Learn more</a>
-</div>
-                <div class="md:w-1/2 md:pl-12">
-                    <img src="https://images.ctfassets.net/w6r2i5d8q73s/1Yfjnj6h9ghHHBA3nvPtXX/cf3585f92d5b84e271cbbce394e5261f/1_how-product-team-use-miroEN_standard_4_3.png" alt="Miro AI in action" class="rounded-lg shadow-xl">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Team Section -->
-    <section class="py-20">
-        <div class="container mx-auto px-8">
-<h2 class="text-3xl font-bold text-center mb-16">The one place where all teams gather to build together</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                    <h3 class="text-xl font-bold mb-4">Product</h3>
-                    <p class="text-gray-600 mb-4">A single platform for product teams to deliver customer value faster.</p>
-                    <a href="#" class="text-blue-600 font-medium hover:underline">Learn more</a>
-</div>
-                
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                    <h3 class="text-xl font-bold mb-4">UX Design & Research</h3>
-                    <p class="text-gray-600 mb-4">Transform scattered insights into stunning experiences—all in one creative playground.</p>
-                    <a href="#" class="text-blue-600 font-medium hover:underline">Learn more</a>
-</div>
-                
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                    <h3 class="text-xl font-bold mb-4">Engineering</h3>
-                    <p class="text-gray-600 mb-4">Streamline your technical journey from concept to launch—all in one vibrant hub.</p>
-                    <a href="#" class="text-blue-600 font-medium hover:underline">Learn more</a>
-</div>
-                
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                    <h3 class="text-xl font-bold mb-4">Program and Project Management</h3>
-                    <p class="text-gray-600 mb-4">Transform unstructured projects into well-coordinated initiatives.</p>
-                    <a href="#" class="text-blue-600 font-medium hover:underline">Learn more</a>
-</div>
-                
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                    <h3 class="text-xl font-bold mb-4">Marketing</h3>
-                    <p class="text-gray-600 mb-4">Streamline campaign planning, collaboration, and execution in a single platform.</p>
-                    <a href="#" class="text-purple-600 font-medium hover:underline">Learn more</a>
-                </div>
-                
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                    <h3 class="text-xl font-bold mb-4">IT</h3>
-                    <p class="text-gray-600 mb-4">Make collaborative decisions quickly, keep stakeholders in the loop, and bring clarity to the complex.</p>
-                    <a href="#" class="text-purple-600 font-medium hover:underline">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- CTA Section -->
-    <section class="py-20 bg-blue-600 text-white mx-6 rounded-lg">
-<div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6">Get started with your team in minutes</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">We recommend using your work email—it keeps work and life separate.</p>
-            <a href="https://miro.com/signup/" class="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg inline-block">Register</a>
-</div>
-    </section>
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 mx-6 rounded-t-lg">
-        <div class="container mx-auto px-8">
-<div class="flex flex-col items-center justify-center space-y-4">
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
-<a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i data-feather="youtube"></i></a>
-                </div>
-                <div class="text-gray-400 text-sm flex space-x-4">
-                    <a href="#" class="hover:text-white">Privacy Policy</a>
-                </div>
-                <p class="text-gray-400 text-sm">Delivery Tool © 2025</p>
-            </div>
-        </div>
-    </footer>
-<script>
-        feather.replace();
-        // Mobile menu toggle
-        document.querySelector('.lg\\:hidden').addEventListener('click', function() {
-            // Add mobile menu toggle functionality here
-        });
-        // Initialize Vanta.js effect
-VANTA.GLOBE({
-            el: ".hero-gradient",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-                    color: 0x1E40AF,
-                    backgroundColor: 0x1E3A8A,
-size: 1.00
-        });
-    </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-50 mx-6 rounded-lg">
+    <div class="container mx-auto px-8 text-center">
+      <h2 class="text-3xl font-bold mb-6">Apply Now</h2>
+      <form class="max-w-md mx-auto space-y-4">
+        <input type="email" placeholder="Apply using email" class="w-full border rounded-lg px-4 py-3">
+        <input type="tel" placeholder="Apply using phone number" class="w-full border rounded-lg px-4 py-3">
+        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">Submit</button>
+      </form>
+      <div class="mt-6">
+        <a href="https://wa.me/1234567890" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg inline-flex items-center space-x-2">
+          <i data-feather="message-circle"></i>
+          <span>Contact via WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 mx-6 rounded-t-lg">
+    <div class="container mx-auto px-8 text-center">
+      <p class="text-gray-400 text-sm mb-2">Privacy Policy</p>
+      <p class="text-gray-400 text-sm">Delivery Tool App © 2025</p>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+
+    // Mobile menu safety check
+    const menuBtn = document.querySelector('.lg\\:hidden');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => {
+        alert("Mobile menu toggle coming soon!");
+      });
+    }
+
+    // Initialize Vanta.js Globe
+    VANTA.GLOBE({
+      el: ".hero-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x1E40AF,
+      backgroundColor: 0x1E3A8A,
+      size: 1.00
+    });
+  </script>
 </body>
 </html>
