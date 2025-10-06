@@ -45,7 +45,7 @@ body {
 
 .nav-center a {
   text-decoration: none;
-  color: #1e3a8a;
+  color: #1e3a89;
   font-weight: 500;
   padding: 8px 15px;
   border-radius: 8px;
@@ -375,6 +375,19 @@ body {
     height: 20px;
   }
 }
+@media (max-width: 768px) {
+  .nav-center {
+    position: static;
+    transform: none;
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+  }
+
+  .nav-right {
+    margin-left: 10px;
+  }
+}
 
 /* PRICING SECTION */
 .pricing-section {
@@ -538,4 +551,110 @@ html {
   font-size: 0.9rem;
   opacity: 0.8;
 }
+/* ===== Privacy & Policy Page Styling ===== */
+body.privacy-page {
+  background-color: #f7f9fc;
+  font-family: "Arial", sans-serif;
+  color: #1e293b;
+  padding: 80px 20px; /* leave space for fixed navbar */
+}
 
+.privacy-page header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.privacy-page header h1 {
+  color: #1e3a8a;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.privacy-page header p {
+  font-size: 1rem;
+  color: #475569;
+}
+
+.privacy-page main {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.privacy-page h2 {
+  color: #2563eb;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.privacy-page p,
+.privacy-page li {
+  line-height: 1.7;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.privacy-page ul {
+  list-style: disc inside;
+  margin-left: 20px;
+}
+
+.privacy-page footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #0f2e67;
+  color: white;
+  margin-top: 60px;
+}
+
+.privacy-page footer a {
+  color: #cfd9ff;
+  text-decoration: none;
+}
+
+.privacy-page footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .privacy-page main {
+    padding: 30px 20px;
+  }
+
+  .privacy-page header h1 {
+    font-size: 2rem;
+  }
+
+  .privacy-page h2 {
+    font-size: 1.3rem;
+  }
+
+  .privacy-page p,
+  .privacy-page li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-page main {
+    padding: 20px 15px;
+  }
+
+  .privacy-page header h1 {
+    font-size: 1.8rem;
+  }
+
+  .privacy-page h2 {
+    font-size: 1.2rem;
+  }
+
+  .privacy-page p,
+  .privacy-page li {
+    font-size: 0.9rem;
+  }
+}
