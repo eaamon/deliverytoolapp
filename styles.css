@@ -202,7 +202,7 @@ body {
 .logo-track {
   display: inline-flex;
   gap: 60px;
-  animation: scroll 5s linear infinite;
+  animation: scroll 35s linear infinite;
   width: max-content; /* ✅ ensures full width of all logos combined */
 }
 
