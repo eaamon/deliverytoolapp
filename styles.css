@@ -33,6 +33,12 @@ body {
   font-size: 24px;
   color: #1e3a8a;
 }
+.nav-right {
+  display: flex;
+  justify-content: center; /* centers content horizontally */
+  align-items: center; /* centers content vertically */
+  overflow: hidden; /* prevents it from spilling out */
+}
 
 .nav-center {
   position: absolute;
@@ -73,6 +79,18 @@ body {
   padding: 8px 15px;
   border-radius: 8px;
   transition: background 0.3s, color 0.3s;
+  display: inline-block; /* ensures it behaves like a block for centering */
+  text-align: center; /* centers multi-line text */
+  white-space: normal; /* allows wrapping */
+  line-height: 1.2;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.2;
+  padding: 8px 12px; /* adjust for spacing */
+  max-width: 100%; /* keeps it inside parent width */
+  box-sizing: border-box; /* ensures padding counts inside width */
 }
 
 .nav-right a:hover {
@@ -202,7 +220,7 @@ body {
 .logo-track {
   display: inline-flex;
   gap: 60px;
-  animation: scroll 35s linear infinite;
+  animation: scroll 50s linear infinite;
   width: max-content; /* ✅ ensures full width of all logos combined */
 }
 
@@ -655,6 +673,113 @@ body.privacy-page {
 
   .privacy-page p,
   .privacy-page li {
+    font-size: 0.9rem;
+  }
+}
+/* ===== Terms & Conditions Page Styling ===== */
+body.terms-page {
+  background-color: #f7f9fc;
+  font-family: "Arial", sans-serif;
+  color: #1e293b;
+  padding: 80px 20px; /* leave space for fixed navbar */
+}
+
+.terms-page header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.terms-page header h1 {
+  color: #1e3a8a;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.terms-page header p {
+  font-size: 1rem;
+  color: #475569;
+}
+
+.terms-page main {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.terms-page h2 {
+  color: #2563eb;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.terms-page p,
+.terms-page li {
+  line-height: 1.7;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.terms-page ul {
+  list-style: disc inside;
+  margin-left: 20px;
+}
+
+.terms-page footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #0f2e67;
+  color: white;
+  margin-top: 60px;
+}
+
+.terms-page footer a {
+  color: #cfd9ff;
+  text-decoration: none;
+}
+
+.terms-page footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .terms-page main {
+    padding: 30px 20px;
+  }
+
+  .terms-page header h1 {
+    font-size: 2rem;
+  }
+
+  .terms-page h2 {
+    font-size: 1.3rem;
+  }
+
+  .terms-page p,
+  .terms-page li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-page main {
+    padding: 20px 15px;
+  }
+
+  .terms-page header h1 {
+    font-size: 1.8rem;
+  }
+
+  .terms-page h2 {
+    font-size: 1.2rem;
+  }
+
+  .terms-page p,
+  .terms-page li {
     font-size: 0.9rem;
   }
 }
